@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.bs_systemv2.10vr.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\outof\\Desktop\\ポメ\\BS_systemV2.10VR_walk\\BS_systemV2.10VR_walk\\BS_systemV2.10VR_walk\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "BS_systemV2.10VR [Testing]"
+        }
+      }
+    }
+  ]
+}

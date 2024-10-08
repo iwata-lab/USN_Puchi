@@ -1,0 +1,8 @@
+﻿time,timeall,timeave,distance,distanceave,rotation,rotationave,dis_position_x,dis_position_y,dis_position_z,body_position_x,body_position_y,body_position_z,body_rotation,body_distance,correct_position_x,correct_position_y,correct_position_z,correct_rotation
+0.0090577,0.0090577,Infinity,8.926425,Infinity,29.57058,Infinity,-0.05229598,1.060353,-0.05175328,-0.05229598,1.060353,-0.05175328,(0.0, -0.4, 0.9),0.07357495,-Infinity,Infinity,-Infinity,-30
+0,0.0090577,Infinity,8.926288,Infinity,29.57063,Infinity,-0.05265296,1.060266,-0.05158722,-0.05265296,1.060266,-0.05158722,(0.0, -0.4, 0.9),0.07371279,-Infinity,Infinity,-Infinity,-30
+0,0.0090577,Infinity,8.926567,Infinity,29.57055,Infinity,-0.05295831,1.060466,-0.05087101,-0.05295831,1.060466,-0.05087101,(0.0, -0.4, 0.9),0.07343325,-Infinity,Infinity,-Infinity,-30
+0,0.0090577,Infinity,8.926668,Infinity,29.57043,Infinity,-0.05254751,1.060396,-0.05114937,-0.05254751,1.060396,-0.05114937,(0.0, -0.4, 0.9),0.07333143,-Infinity,Infinity,-Infinity,-30
+0,0.0090577,Infinity,8.926462,Infinity,29.57046,Infinity,-0.0528301,1.060412,-0.05115464,-0.0528301,1.060412,-0.05115464,(0.0, -0.4, 0.9),0.07353786,-Infinity,Infinity,-Infinity,-30
+0,0.0090577,Infinity,8.926591,Infinity,29.57051,Infinity,-0.05257499,1.060299,-0.05123192,-0.05257499,1.060299,-0.05123192,(0.0, -0.4, 0.9),0.07340872,-Infinity,Infinity,-Infinity,-30
+0,0.0090577,Infinity,8.926339,Infinity,29.57086,Infinity,-0.05233508,1.060216,-0.05183631,-0.05233508,1.060216,-0.05183631,(0.0, -0.4, 0.9),0.07366114,-Infinity,Infinity,-Infinity,-30
