@@ -97,6 +97,11 @@
      <Compile Include="Assets\KAT\SDK\LocoSExtraData.cs" />
      <Compile Include="Assets\boyball.cs" />
      <Compile Include="Assets\ResonanceAudio\Demos\Scripts\noise.cs" />
+     <Compile Include="Assets\Loading Games\Toon City Pack\Demo\Scripts\Helicopter.cs" />
+     <Compile Include="Assets\Loading Games\Toon City Pack\Demo\Scripts\PoliceSiren.cs" />
+     <Compile Include="Assets\Loading Games\Toon City Pack\Demo\Scripts\StreetLight.cs" />
+     <Compile Include="Assets\Loading Games\Toon City Pack\Demo\Scripts\BuildingLights.cs" />
+     <Compile Include="Assets\Loading Games\Toon City Pack\Demo\Scripts\TrafficLights.cs" />
      <None Include="Assets\Yurowm\Shaders\SkinShader.shader" />
      <None Include="Assets\Kevin Iglesias\3DCharacterDummy\Readme.txt" />
      <None Include="Assets\KAT\KAT Unity SDK Usage.txt" />

@@ -2023,6 +2023,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013165000468, guid: 8d8c4feb0f3734158b2332286ba4342b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4000014274899290, guid: 8d8c4feb0f3734158b2332286ba4342b, type: 3}
       propertyPath: m_RootOrder
       value: 3
