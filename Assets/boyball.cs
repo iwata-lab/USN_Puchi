@@ -7,7 +7,7 @@ public class boyball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //aaa
+        //practice
     }
 
     // Update is called once per frame
