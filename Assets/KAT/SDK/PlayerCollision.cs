@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    public int score = 100;  // スコアの初期値
+    private ScoreManager scoreManager;
+
+    void Start()
+    {
+        scoreManager = FindObjectOfType<ScoreManager>();
+    }
 
     // 衝突検知メソッド
     void OnCollisionEnter(Collision collision)
@@ -12,12 +17,9 @@ public class PlayerCollision : MonoBehaviour
         // 衝突したオブジェクトが「Obstacle」タグを持つ場合
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            // スコアが0以下にならないようにする
-            if (score > 0)
-            {
-                score -= 10; // スコアを10減らす
-                Debug.Log("障害物に衝突しました！スコア: " + score);
-            }
+            scoreManager.SubtractScore(10);
         }
+
     }
+
 }

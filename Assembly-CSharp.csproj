@@ -91,6 +91,7 @@
      <Compile Include="Assets\KAT\SDK\MiniSExtraData.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\ballguidemove.cs" />
      <Compile Include="Assets\KAT\SDK\KATXRWalker.cs" />
+     <Compile Include="Assets\KAT\SDK\PlayerCollision.cs" />
      <Compile Include="Assets\KAT\SDK\Legacy\3DTDemos\OverweightTrigger.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\heyballmove.cs" />
      <Compile Include="Assets\KAT\Demo\4. C2ExtensionAndExtraData\C2ExtraDataDemo.cs" />
@@ -102,7 +103,8 @@
      <Compile Include="Assets\KAT\SDK\LocoSExtraData.cs" />
      <Compile Include="Assets\boyball.cs" />
      <Compile Include="Assets\ResonanceAudio\Demos\Scripts\noise.cs" />
-     <Compile Include="Assets\KAT\SDK\PlayerCollision.cs" />
+     <Compile Include="Assets\TimeManager.cs" />
+     <Compile Include="Assets\ScoreManager.cs" />
      <None Include="Assets\Yurowm\Shaders\SkinShader.shader" />
      <None Include="Assets\Kevin Iglesias\3DCharacterDummy\Readme.txt" />
      <None Include="Assets\KAT\KAT Unity SDK Usage.txt" />
