@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    private int score = 100;    // 初期スコア：100点
+    public static int score = 100;    // 初期スコア：100点
 
     public void AddScore(int amount)
     {
@@ -14,12 +14,12 @@ public class ScoreManager : MonoBehaviour
 
     public void SubtractScore(int amount)
     {
-        score -= amout;
+        score -= amount;
         if (score < 0) score = 0;   // scoreがマイナスにならないように
         //Debug.Log("スコアが減りました：" + score);
     }
 
-    public int GetScore()
+    public static int GetScore()
     {
         return score;
     }
