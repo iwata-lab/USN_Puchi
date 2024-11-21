@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.TimeManager;
-using UnityEngine.SceneManager;
+using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
-    public float timeLimit = 180;   // 制限時間180秒
-    private float timer;
+    public static float timeLimit = 180.0f;   // 制限時間180秒
+    public float timer = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,13 +25,14 @@ public class TimeManager : MonoBehaviour
       } 
     }
 
-    void EndGame()
-    {
-        int finalScore = FindObjectOfType<ScoreManager>().GetScore;
-        PlayerPrefs.SetInt("FinalScore",finalScore);
+void EndGame()
+{
+    int finalScore = ScoreManager.GetScore(); // インスタンス化せずに直接呼び出す
+    PlayerPrefs.SetInt("FinalScore", finalScore);
 
-        // クリア画面に遷移
-        SceneManager.LoadScene("ScoreScene");
-    }
+    // クリア画面に遷移
+    SceneManager.LoadScene("ScoreScene");
+}
+
 
 }
