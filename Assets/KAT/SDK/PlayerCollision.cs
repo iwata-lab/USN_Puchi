@@ -20,7 +20,7 @@ public class PlayerCollision : MonoBehaviour
             scoreManager.SubtractScore(10);
 
             collisionCount ++;  // 衝突した回数を数える
-            //Debug.Log("衝突回数：" + collisionCount);
+            Debug.Log("衝突回数：" + collisionCount);
 
         }
 

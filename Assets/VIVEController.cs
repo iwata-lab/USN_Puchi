@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class VIVEController : MonoBehaviour
 {
-    public SteamVR_Action_Boolean triggerAction; // ボタン（例: Trigger）を設定
-    public SteamVR_Input_Sources handType; // 使用する手（例: RightHand）
+    public SteamVR_Action_Boolean triggerAction;  // トリガーボタンのアクション（例: Trigger）
+    public SteamVR_Input_Sources handType;        // 使用する手（例: RightHand）
 
-    private GameObject currentCoin;
-   
+    private GameObject currentCoin;                // 現在インタラクション中のコイン
+
     void Start()
     {
-        
+        // 初期設定（必要に応じて）
     }
 
     void Update()
@@ -20,28 +21,29 @@ public class VIVEController : MonoBehaviour
         // トリガーボタンが押された場合
         if (triggerAction.GetStateDown(handType) && currentCoin != null)
         {
-            currentCoin.GetComponent<CoinColorChange>().SetColor(Color blue); // 青色に変更
-        }        
+            // トリガーが押されたときはコインを青色に変更
+            currentCoin.GetComponent<CoinColorChange>().SetColor(Color.blue);
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        // Coinに触れた場合
+        // コインに触れた場合
         if (other.CompareTag("Coin"))
         {
             currentCoin = other.gameObject;
-            currentCoin.GetComponent<Coin>().SetColor(Color.red); // 赤色に変更
+            // コインに触れた時に赤色に変更
+            //Debug.Log("CoinTouch");
+            currentCoin.GetComponent<CoinColorChange>().SetColor(Color.red);
         }
+    }
 
     void OnTriggerExit(Collider other)
     {
-        // Coinから離れたらリセット
+        // コインから手が離れた場合
         if (other.CompareTag("Coin"))
         {
             currentCoin = null;
         }
     }
-
-    }
-
 }
