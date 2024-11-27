@@ -33,7 +33,7 @@ public class VIVEController : MonoBehaviour
         {
             currentCoin = other.gameObject;
             // コインに触れた時に赤色に変更
-            //Debug.Log("CoinTouch");
+            Debug.Log("CoinTouch");
             currentCoin.GetComponent<CoinColorChange>().SetColor(Color.red);
         }
     }

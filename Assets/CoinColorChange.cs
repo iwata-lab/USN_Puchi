@@ -16,6 +16,7 @@ public class CoinColorChange : MonoBehaviour
     // コインの色を変更するメソッド
     public void SetColor(Color color)
     {
+        //Debug.Log($"Setting color to: {color}");
         if (color == Color.blue)
         {
             coincount++;  // 青色に変更された場合、コインカウントを増加
