@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class TimeManager : MonoBehaviour
 {
-    public static float timeLimit = 180.0f;   // 制限時間180秒
+    public static float timeLimit = 5.0f;   // 制限時間180秒
     public float timer = 0.0f;
+
+    public Text TimerText;
+    private bool gameEnded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +22,14 @@ public class TimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      timer -= Time.deltaTime;
+      if (gameEnded) return;  // 終了処理後は何もしない
 
-      if (timer <= 0) 
+      timer -= Time.deltaTime;
+      TimerText.text = timer.ToString("F1");
+
+      if (timer <= 0 && !gameEnded) 
       {
+        gameEnded = true; // 終了処理実行フラグをセット
         EndGame();
       } 
     }
