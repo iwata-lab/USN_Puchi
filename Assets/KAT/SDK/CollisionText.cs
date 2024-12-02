@@ -6,41 +6,46 @@ using UnityEngine.UI;
 public class CollisionText : MonoBehaviour
 {
 
-    public gameObject collisionText;
-    private Coroutine displayCoroutine;
+    public Text collisionText;
+    private float displayTime = 2.5f;
+    private float timer = 0.0f;
+    private bool showText = false;
 
     void Start()
     {
-        if (collisionText != null)
+        collisionText.gameObject.SetActive(false);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
         {
-            collisionText.SetActive(false); // 初期状態では非表示
-        }        
+            collisionText.gameObject.SetActive(true);
+            showText = true;
+            timer = displayTime;
+        }
+    }
+
+    void Update()
+    {
+        if (showText)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0.0f)
+            {
+                collisionText.gameObject.SetActive(false);
+                showText = false;
+            }
+        }
     }
 
     public void DisplayCollisionText()
     {
-        if (displayCoroutine != null)
-        {
-            StopCoroutine(displayCoroutine); // 前の表示処理を停止
-        }
-        displayCoroutine = StartCoroutine(DisplayTextCoroutine());
+        collisionText.gameObject.SetActive(true);
+        showText = true;
+        timer = displayTime;
+
     }
 
-    // テキストを一定時間表示し、非表示にするコルーチン
-    private IEnumerator DisplayTextCoroutine()
-    {
-        if (collisionText != null)
-        {
-            collisionText.SetActive(true); // テキストを表示
-            yield return new WaitForSeconds(3f); // 3秒待機
-            collisionText.SetActive(false); // テキストを非表示
-        }
-    }    
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
+

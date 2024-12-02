@@ -8,7 +8,7 @@ public class PlayerCollision : MonoBehaviour
     private ScoreManager scoreManager;
     public static int collisionCount = 0;
 
-    private CollisionText collisiontText;
+    private CollisionText collisionText;
 
     void Start()
     {
