@@ -7,7 +7,7 @@ public class CollisionText : MonoBehaviour
 {
 
     public Text collisionText;
-    private float displayTime = 2.5f;
+    private float displayTime = 2.0f;
     private float timer = 0.0f;
     private bool showText = false;
 

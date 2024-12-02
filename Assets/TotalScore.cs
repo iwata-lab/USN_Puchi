@@ -13,7 +13,7 @@ public class TotalScore : MonoBehaviour
     void Start()
     {
         totalScore = ScoreManager.GetScore();
-        ScoreText.text = totalScore.ToString();
+        ScoreText.text = totalScore.ToString() + " 点";
     }
 
     // Update is called once per frame

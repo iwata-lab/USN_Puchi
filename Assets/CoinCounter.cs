@@ -13,7 +13,7 @@ public class CoinCounter : MonoBehaviour
     void Start()
     {
         totatlCoin = CoinColorChange.GetCoinCount();
-        CoinCounterText.text = totatlCoin.ToString();
+        CoinCounterText.text = totatlCoin.ToString() + " 枚";
 
     }
 

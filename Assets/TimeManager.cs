@@ -25,7 +25,7 @@ public class TimeManager : MonoBehaviour
       if (gameEnded) return;  // 終了処理後は何もしない
 
       timer -= Time.deltaTime;
-      TimerText.text = timer.ToString("F1");
+      TimerText.text = timer.ToString("F1") + " s";
 
       if (timer <= 0 && !gameEnded) 
       {

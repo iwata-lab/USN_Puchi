@@ -13,7 +13,7 @@ public class CollisionCounter : MonoBehaviour
     void Start()
     {
         totalCollision = PlayerCollision.GetCollision();
-        CollisionText.text = totalCollision.ToString();
+        CollisionText.text = totalCollision.ToString() + " 回";
 
     }
 

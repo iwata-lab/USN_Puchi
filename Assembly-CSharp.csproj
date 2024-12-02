@@ -85,6 +85,7 @@
      <Compile Include="Assets\Loading Games\Toon City Pack\Demo\Scripts\BuildingLights.cs" />
      <Compile Include="Assets\TotalScore.cs" />
      <Compile Include="Assets\Yurowm\Demo\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\KAT\SDK\CollisionText.cs" />
      <Compile Include="Assets\ResonanceAudio\Demos\Scripts\ResonanceAudioDemo\Key1.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioRoom.cs" />
      <Compile Include="Assets\KAT\SDK\Legacy\3DTDemos\TremorShortTrigger.cs" />
@@ -110,7 +111,8 @@
      <Compile Include="Assets\KAT\SDK\LocoSExtraData.cs" />
      <Compile Include="Assets\boyball.cs" />
      <Compile Include="Assets\ResonanceAudio\Demos\Scripts\noise.cs" />
-     <Compile Include="Assets\KAT\SDK\CollisionText.cs" />
+     <Compile Include="Assets\DistanceTracker.cs" />
+     <Compile Include="Assets\TotalDistance.cs" />
      <None Include="Assets\Yurowm\Shaders\SkinShader.shader" />
      <None Include="Assets\Kevin Iglesias\3DCharacterDummy\Readme.txt" />
      <None Include="Assets\KAT\KAT Unity SDK Usage.txt" />
