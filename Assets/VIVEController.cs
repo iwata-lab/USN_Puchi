@@ -23,6 +23,7 @@ public class VIVEController : MonoBehaviour
         {
             // トリガーが押されたときはコインを青色に変更
             currentCoin.GetComponent<CoinColorChange>().SetColor(Color.blue);
+            //Debug.Log("Trigger pressed");
         }
     }
 
@@ -32,9 +33,12 @@ public class VIVEController : MonoBehaviour
         if (other.CompareTag("Coin"))
         {
             currentCoin = other.gameObject;
-            // コインに触れた時に赤色に変更
-            Debug.Log("CoinTouch");
-            currentCoin.GetComponent<CoinColorChange>().SetColor(Color.red);
+
+            if (!currentCoin.GetComponent<CoinColorChange>().isBlue)            // コインに触れた時に赤色に変更
+            {
+                //Debug.Log("CoinTouch");
+                currentCoin.GetComponent<CoinColorChange>().SetColor(Color.red);
+            }
         }
     }
 
