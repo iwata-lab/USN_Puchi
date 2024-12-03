@@ -44,6 +44,7 @@
      <Compile Include="Assets\KAT\SDK\Legacy\_3DTerrainPlatform.cs" />
      <Compile Include="Assets\Yurowm\Demo\Scripts\CharacterPanel.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\walktest.cs" />
+     <Compile Include="Assets\SyncKATVRWithXR.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\ballpos.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioListener.cs" />
      <Compile Include="Assets\ResonanceAudio\Demos\Scripts\ResonanceAudioDemo\key.cs" />
@@ -67,6 +68,7 @@
      <Compile Include="Assets\ResonanceAudio\Demos\Scripts\ResonanceAudioDemo\ResonanceAudioDemoManager.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\Hey_Ball.cs" />
      <Compile Include="Assets\DataLogger7.cs" />
+     <Compile Include="Assets\KatWalkSync.cs" />
      <Compile Include="Assets\CollisionCounter.cs" />
      <Compile Include="Assets\VIVEController.cs" />
      <Compile Include="Assets\ResonanceAudio\Demos\Scripts\ResonanceAudioDemo\ResonanceAudioDemoCubeController.cs" />
@@ -113,8 +115,7 @@
      <Compile Include="Assets\KAT\SDK\LocoSExtraData.cs" />
      <Compile Include="Assets\boyball.cs" />
      <Compile Include="Assets\ResonanceAudio\Demos\Scripts\noise.cs" />
-     <Compile Include="Assets\SyncKATVRWithXR.cs" />
-     <Compile Include="Assets\KatWalkSync.cs" />
+     <Compile Include="Assets\CarMovement.cs" />
      <None Include="Assets\Yurowm\Shaders\SkinShader.shader" />
      <None Include="Assets\Kevin Iglesias\3DCharacterDummy\Readme.txt" />
      <None Include="Assets\KAT\KAT Unity SDK Usage.txt" />
@@ -310,7 +311,7 @@
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.6f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.6f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -658,73 +659,73 @@
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.6f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Subsystem.Registration">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenVR">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.XR.OpenVR.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.XR.OpenVR.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenVR.Editor">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.XR.OpenVR.Editor.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.XR.OpenVR.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Recorder.Editor">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Recorder">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.Management.Editor">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Recorder.Base">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.Recorder.Base.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:/Users/sbrks/Desktop/work/usnpuchi/USN_Puchi/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>C:/Users/sakin/Desktop/enpra/USN_Puchi/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
