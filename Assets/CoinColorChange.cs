@@ -30,7 +30,7 @@ public class CoinColorChange : MonoBehaviour
             coincount++;  // 青色に変更された場合、コインカウントを増加
             hasChangedToBlue = true;  // 青色に変更されたことを記録
             
-            scoreManager.AddScore(5);
+            scoreManager.AddScore(3);
 
         }
 

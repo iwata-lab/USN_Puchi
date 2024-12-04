@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
-    public static float timeLimit = 40.0f;   // 制限時間180秒
+    public static float timeLimit = 120.0f;   // 制限時間180秒
     public float timer = 0.0f;
 
     public Text TimerText;
