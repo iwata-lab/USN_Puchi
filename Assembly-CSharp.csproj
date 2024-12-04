@@ -109,13 +109,14 @@
      <Compile Include="Assets\KAT\Demo\4. C2ExtensionAndExtraData\C2ExtraDataDemo.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\noise.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioRoomManager.cs" />
+     <Compile Include="Assets\CarMovement.cs" />
      <Compile Include="Assets\KAT\Demo\1. Get Devices\GetDevicesDemo.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\ResonanceAudioReverbProbe.cs" />
      <Compile Include="Assets\Loading Games\Toon City Pack\Demo\Scripts\TrafficLights.cs" />
      <Compile Include="Assets\KAT\SDK\LocoSExtraData.cs" />
      <Compile Include="Assets\boyball.cs" />
      <Compile Include="Assets\ResonanceAudio\Demos\Scripts\noise.cs" />
-     <Compile Include="Assets\CarMovement.cs" />
+     <Compile Include="Assets\SignalLight.cs" />
      <None Include="Assets\Yurowm\Shaders\SkinShader.shader" />
      <None Include="Assets\Kevin Iglesias\3DCharacterDummy\Readme.txt" />
      <None Include="Assets\KAT\KAT Unity SDK Usage.txt" />
