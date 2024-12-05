@@ -13,20 +13,39 @@ public class SignalLight : MonoBehaviour
     private int currentLight = 0;   // 現在のライト（0:緑，1:黄，2:赤）
 
     // 各ライトの点灯時間
-    private float greenDuration = 10f;
-    private float yellowDuration = 3f;
-    private float redDuration = 5f;
+    private float greenDuration = 15f;
+    private float yellowDuration = 4f;
+    private float redDuration = 15f;
 
+    public void SetInitialState(SignalManager.SignalState initialState)
+    {
+        lightTimer = 0f;
+        red.enabled = false;
+        yellow.enabled = false;
+        green.enabled = false;
+
+        switch (initialState)
+        {
+            case SignalManager.SignalState.Green:
+                green.enabled = true;
+                currentLight = 0;
+                break;
+            case SignalManager.SignalState.Yellow:
+                yellow.enabled = true;
+                currentLight = 1;
+                break;
+            case SignalManager.SignalState.Red:
+                red.enabled = true;
+                currentLight = 2;
+                break;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         lightTimer = 0f;
 
-        // ライトの初期化
-        red.enabled = false;
-        yellow.enabled = false;
-        green.enabled = true;
     }
 
     // Update is called once per frame

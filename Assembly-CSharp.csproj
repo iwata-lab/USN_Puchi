@@ -41,6 +41,7 @@
      <Compile Include="Assets\ResonanceAudio\Scripts\Hey_Guide.cs" />
      <Compile Include="Assets\KAT\SDK\Legacy\KATLegacySDK.cs" />
      <Compile Include="Assets\Yurowm\Demo\Scripts\CharacterViewer.cs" />
+     <Compile Include="Assets\SignalLight.cs" />
      <Compile Include="Assets\KAT\SDK\Legacy\_3DTerrainPlatform.cs" />
      <Compile Include="Assets\Yurowm\Demo\Scripts\CharacterPanel.cs" />
      <Compile Include="Assets\ResonanceAudio\Scripts\walktest.cs" />
@@ -116,7 +117,7 @@
      <Compile Include="Assets\KAT\SDK\LocoSExtraData.cs" />
      <Compile Include="Assets\boyball.cs" />
      <Compile Include="Assets\ResonanceAudio\Demos\Scripts\noise.cs" />
-     <Compile Include="Assets\SignalLight.cs" />
+     <Compile Include="Assets\SignalManager.cs" />
      <None Include="Assets\Yurowm\Shaders\SkinShader.shader" />
      <None Include="Assets\Kevin Iglesias\3DCharacterDummy\Readme.txt" />
      <None Include="Assets\KAT\KAT Unity SDK Usage.txt" />
