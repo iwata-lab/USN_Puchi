@@ -13,9 +13,9 @@ public class SignalLight : MonoBehaviour
     private int currentLight = 0;   // 現在のライト（0:緑，1:黄，2:赤）
 
     // 各ライトの点灯時間
-    private float greenDuration = 15f;
-    private float yellowDuration = 4f;
-    private float redDuration = 15f;
+    private float greenDuration = 12f;
+    private float yellowDuration = 3f;
+    private float redDuration = 12f;
 
     public void SetInitialState(SignalManager.SignalState initialState)
     {
