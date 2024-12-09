@@ -87,17 +87,17 @@ public class SignalLight : MonoBehaviour
             case 0: // 緑 → 黄
                 yellow.enabled = true;
                 currentLight = 1;
-                Debug.Log("Yellow Light ON");
+                //Debug.Log("Yellow Light ON");
                 break;
             case 1: // 黄 → 赤
                 red.enabled = true;
                 currentLight = 2;
-                Debug.Log("Red Light ON");
+                //Debug.Log("Red Light ON");
                 break;
             case 2: // 赤 → 緑
                 green.enabled = true;
                 currentLight = 0;
-                Debug.Log("Green Light ON");
+                //Debug.Log("Green Light ON");
                 break;
         }
 

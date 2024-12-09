@@ -4,10 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 
 public class TimeManager : MonoBehaviour
 {
-    public static float timeLimit = 120.0f;   // 制限時間180秒
+    public static float timeLimit = 120.0f;   // 制限時間120秒
     public float timer = 0.0f;
 
     public Text TimerText;
@@ -34,14 +38,28 @@ public class TimeManager : MonoBehaviour
       } 
     }
 
-void EndGame()
-{
-    int finalScore = ScoreManager.GetScore(); // インスタンス化せずに直接呼び出す
-    PlayerPrefs.SetInt("FinalScore", finalScore);
+  void EndGame()
+  {
+      int finalScore = ScoreManager.GetScore(); 
+      PlayerPrefs.SetInt("FinalScore", finalScore);
 
-    // クリア画面に遷移
-    SceneManager.LoadScene("ScoreScene");
-}
+      // クリア画面に遷移
+      SceneManager.LoadScene("ScoreScene");
+
+      // 5秒後にPlayモードを終了
+      Invoke("QuitGame", 5.0f);
+  }
+
+  void QuitGame()
+  {
+      Debug.Log("Attempring to quit play mode");
+
+      #if UNITY_EDITOR
+      UnityEditor.EditorApplication.isPlaying = false; // Unityエディタ用
+      #else
+      Application.Quit(); // ビルド後の実行環境用
+      #endif
+  }
 
 
 }
